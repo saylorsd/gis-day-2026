@@ -1,0 +1,65 @@
+/* 90s Windows 95 Style Button */
+.btn {
+    /*
+     * Bevel thickness scales with the button's font size, so big buttons on
+     * high-DPI screens get a chunky bevel instead of a 1px hairline.
+     * Never thinner than 2px.
+     */
+    --bevel: max(2px, 0.08em);
+    --pad-y: 4px;
+    --pad-x: 20px;
+
+    /* Core styling */
+    background-color: #c0c0c0;
+    color: #000000;
+    font-family: "Times New Roman", Arial, sans-serif;
+    padding: var(--pad-y) var(--pad-x);
+    min-width: 80px;
+    min-height: 25px;
+    cursor: pointer;
+
+    /* Reset default styles */
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+
+    /* Two-layer Win95 bevel: white/black outer edge, light/dark gray inner edge */
+    box-shadow: inset calc(var(--bevel) * -1) calc(var(--bevel) * -1) 0 #000000,
+    inset var(--bevel) var(--bevel) 0 #ffffff,
+    inset calc(var(--bevel) * -2) calc(var(--bevel) * -2) 0 #808080,
+    inset calc(var(--bevel) * 2) calc(var(--bevel) * 2) 0 #dfdfdf;
+
+    /* Text alignment fix */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+/* Focused state (Dotted inner border, just inside the bevel) */
+.btn:focus-visible {
+    outline: var(--bevel) dotted #000000;
+    outline-offset: calc(var(--bevel) * -4);
+}
+
+/* Pressed State (Inverted Bevel) */
+.btn:active {
+    box-shadow: inset var(--bevel) var(--bevel) 0 #000000,
+    inset calc(var(--bevel) * -1) calc(var(--bevel) * -1) 0 #ffffff,
+    inset calc(var(--bevel) * 2) calc(var(--bevel) * 2) 0 #808080,
+    inset calc(var(--bevel) * -2) calc(var(--bevel) * -2) 0 #dfdfdf;
+
+    /* Nudge the label down-right by one bevel width, at every size */
+    padding: calc(var(--pad-y) + var(--bevel)) calc(var(--pad-x) - var(--bevel)) calc(var(--pad-y) - var(--bevel)) calc(var(--pad-x) + var(--bevel));
+}
+
+.btn.lg {
+    @apply text-2xl;
+    height: auto;
+}
+
+.btn.xl {
+    @apply text-4xl;
+    @apply block w-full max-w-md mx-auto;
+    --pad-y: 0.75rem;
+}

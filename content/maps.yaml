@@ -1,0 +1,7 @@
+# Map gallery. creators are ids from people.yaml. Example:
+#   - title: Pittsburgh Bridges
+#     creators: [steve-saylor]
+#     description: |
+#       Every bridge in the city.
+title: Maps
+maps: []

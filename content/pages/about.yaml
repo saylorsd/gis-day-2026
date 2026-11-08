@@ -1,0 +1,73 @@
+# About page, served at /about/.
+# body is a list of blocks: "markdown" (Markdown text) or "table"
+# (columns, then rows keyed by column; a list in a cell = one item per line).
+title: About
+body:
+  - markdown: |
+      A Pittsburgh GIS Day event is hosted by Carnegie Mellon University (CMU) Libraries and other partners. The 2025 planning committee included the following people:
+  - table:
+      columns:
+        - Name
+        - Affiliation
+      rows:
+        - Name:
+            - Lynn Kawaratani
+            - Charlotte Kiger Price
+            - Erin Swift
+            - Jessica Benner
+          Affiliation:
+            - University Libraries
+            - CMU
+        - Name: Alex Hiniker
+          Affiliation:
+            - CMU Sustainability Initiative
+            - CMU
+        - Name:
+            - Suzy Li
+            - Rich Nisa
+          Affiliation:
+            - School of Architecture
+            - CMU
+        - Name: Adam Kidane
+          Affiliation:
+            - Enterprise Space Information Management
+            - CMU
+        - Name:
+            - Melinda Angeles
+            - Eli Thomas
+          Affiliation:
+            - GIS Office
+            - Allegheny County
+        - Name: Boris Michev
+          Affiliation:
+            - University Library System
+            - Pitt
+        - Name: Susan Lucas
+          Affiliation:
+            - Urban Studies
+            - Pitt
+        - Name: Daniel Williams
+          Affiliation:
+            - Geology and Environmental Science
+            - Pitt
+        - Name: Giovanni Svevo
+          Affiliation:
+            - Department of Innovation and Performance
+            - City of Pittsburgh
+        - Name: Josh Mullenite
+          Affiliation:
+            - Falk School of Sustainability & Environment
+            - Chatham
+        - Name:
+            - Rachel Weeden
+            - Ridge Wadell
+          Affiliation: Esri
+        - Name: Sam Buckley
+          Affiliation: Pittsburgh Regional Transit
+        - Name:
+            - Steve Saylor
+            - Ross Reilly
+          Affiliation:
+            - WPRDC
+            - UCSUR,
+            - Pitt

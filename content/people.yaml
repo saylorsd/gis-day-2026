@@ -1,0 +1,37 @@
+# Speakers and map creators, keyed by a short id used in program.yaml and
+# maps.yaml. Optional: title (e.g. "Geologist"), department, organization.
+skylar-roth:
+  name: Skylar Roth
+  organization: pitt
+suzy-li:
+  name: Suzy Li
+  organization: cmu
+stuti-garg:
+  name: Stuti Garg
+  organization: cmu
+yash-shah:
+  name: Yash Shah
+  organization: cmu
+steve-saylor:
+  name: Steve Saylor
+  organization: wprdc
+caitlin-young:
+  name: Caitlin Young
+  organization: pitt
+noah-held:
+  name: Noah Held
+  organization: fay-penn
+taki-dai:
+  name: Taki Dai
+  organization: cmu
+matt-mercurio:
+  name: Matt Mercurio
+  title: Geologist
+  organization: at-large
+sydney-lytle:
+  name: Sydney Lytle
+  organization: acaa
+uma-gupta:
+  name: Uma Gupta
+  department: Department of Planning, Design, and Construction
+  organization: pitt

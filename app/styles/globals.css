@@ -1,0 +1,19 @@
+/* Tailwind without Preflight: keep the browser's default 90s look. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+/* Our styles, compiled into the same file. Utilities override components. */
+@import "./main.css" layer(base);
+@import "./button.css" layer(components);
+@import "./midi-player.css" layer(components);
+
+@layer base {
+    body {
+        @apply text-base;
+    }
+}
+
+/* Class names can live in components and in YAML content (Markdown/HTML). */
+@source "../../components";
+@source "../../content";

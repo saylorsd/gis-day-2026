@@ -1,0 +1,47 @@
+# Lightning talk schedule.
+#
+# Talk times are computed: talks run back to back from the session start,
+# 5 minutes each, with each subsession's Q&A after its last talk.
+# speakers are ids from people.yaml. Optional per talk: description.
+# Optional per subsession: title, qa_minutes (default 5; 0 for none).
+title: Program
+
+sessions:
+  - name: Lightning Session 1
+    start: "09:15"
+    end: "09:45"
+    subsessions:
+      - talks:
+          - title: Urban Studies Applied GIS Student Survey
+            speakers: [skylar-roth]
+          - title: "Teaching GeoAI: Building Foundations for Spatial Judgment"
+            speakers: [suzy-li]
+      - talks:
+          - title: Who Let the Heat Out? Campus Growth and Neighborhood Warming Across Twelve Pittsburgh Institutions
+            speakers: [stuti-garg, yash-shah]
+          - title: New spatial features on the WPRDC
+            speakers: [steve-saylor]
+
+  - name: Lightning Session 2
+    start: "10:15"
+    end: "10:35"
+    subsessions:
+      - talks:
+          - title: Mapping Pittsburgh Community Theaters
+            speakers: [caitlin-young]
+          - title: The Fayette ATLAS Project
+            speakers: [noah-held]
+          - title: Carnegie Mellon University Arboretum Tour
+            speakers: [taki-dai]
+
+  - name: Lightning Session 3
+    start: "11:15"
+    end: "11:35"
+    subsessions:
+      - talks:
+          - title: "Loafometry: Dimensions of Deliciousness"
+            speakers: [matt-mercurio]
+          - title: "GIS Beyond the Airfield: Bringing Airports Indoors"
+            speakers: [sydney-lytle]
+          - title: ArcGIS Indoors? a floor-aware indoor GIS map of all Pitt campus
+            speakers: [uma-gupta]

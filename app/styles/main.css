@@ -1,0 +1,40 @@
+body {
+    background-image: url('/images/bgworld2.jpg');
+    @apply text-center;
+    @apply w-full px-0 m-0;
+    @apply text-lg;
+}
+
+li {
+    @apply text-left;
+}
+
+table {
+    @apply mx-auto text-left;
+    border: 2px outset #c0c0c0;
+    border-spacing: 2px;
+    @apply font-black;
+}
+
+th,
+td {
+    @apply px-2 py-1;
+    border: 1px inset #c0c0c0;
+}
+
+th {
+    background-color: #c0c0c0;
+    color: #000000;
+}
+
+.content {
+
+}
+
+.content p,
+.content ol,
+.content ul,
+.content li {
+    @apply text-xl font-medium;
+    @apply text-left;
+}

@@ -1,0 +1,14 @@
+# Organizations, keyed by a short id used in people.yaml and tabling.yaml.
+pitt:
+  name: University of Pittsburgh
+cmu:
+  name: Carnegie Mellon University
+fay-penn:
+  name: Fay-Penn Economic Development Council
+at-large:
+  name: At Large
+acaa:
+  name: Allegheny County Airport Authority
+wprdc:
+  name: Western PA Regional Data Center
+  website: https://wprdc.org

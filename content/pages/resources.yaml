@@ -1,0 +1,77 @@
+# Resources page, served at /resources/.
+# body is a list of blocks: "markdown" (Markdown text) or "table"
+# (columns, then rows keyed by column; a list in a cell = one item per line).
+title: Resources
+body:
+  - markdown: |
+      Events for Carnegie Mellon University Libraries are open to all, regardless of race, color, national origin, sex, disability, age, sexual orientation, gender identity, religion, creed, ancestry, belief, veteran status or genetic information.
+
+      If you require accessibility accommodations, please email Jessica Benner ([jbenner@andrew.cmu.edu](mailto:jbenner@andrew.cmu.edu)) with the word “accessibility” in the subject line to share your needs.
+
+      ## Location
+
+      The event will be held in the Rangos Ballroom on the [second floor](https://www.google.com/url?q=http://www.cmu.edu/cohon-university-center/images/floor-plans/CUC_2.pdf&sa=D&source=editors&ust=1762905357305479&usg=AOvVaw1K-y5ZJTyDW-828f3NVtye) of CMU's Cohon University Center (CUC). You can enter the building from Forbes Ave, the grassy area called The Cut, or across from the Tennis Courts. [https://maps.app.goo.gl/6oVJwSg7us45ZwYP7](https://maps.app.goo.gl/6oVJwSg7us45ZwYP7)
+
+      ## Restrooms
+
+      - Gendered restrooms are located directly across the hall from Rangos Ballroom.
+      - Single user restrooms are located on the [Lower Level](https://www.google.com/url?q=https://www.cmu.edu/cohon-university-center/images/floor-plans/cohon-center-building-map-ll.pdf&sa=D&source=editors&ust=1762905357306519&usg=AOvVaw0dmUlLM_4HpH19h7k989sh) in rooms LL84A and LL84B near Tartan Ink and Scotch and Soda.
+
+      ## Composing & Reusables
+
+      - Dishes provided for meals will be compostable and compost bins are located in Rangos Ballroom. Please make an effort to compost these materials after eating.
+      - Please bring your own water bottle or coffee mug to help reduce the amount of disposable cups used.
+
+      ## Captioning
+
+      - Live captioning will be provided during presentations. You can open the captioning on your own device and follow along using [this StreamCast link](https://www.google.com/url?q=https://www.streamtext.net/player?event%3DGIS2025&sa=D&source=editors&ust=1762905357307616&usg=AOvVaw2PpX3wwSC0qdXQlAEJ61hr).
+
+      ## Wi-Fi
+
+      - Visitor access to WIFI is provided through the CMU Guest Wireless network.
+      - Username and password information will be emailed to participants and posted during the event.
+
+      ## Quiet Spaces
+
+      - The Dowd Room [across from Rangos Ballroom](https://www.google.com/url?q=http://www.cmu.edu/cohon-university-center/images/floor-plans/CUC_2.pdf&sa=D&source=editors&ust=1762905357308392&usg=AOvVaw1Gk-DtFdxeCNy45Gmgcu3J) is a designated Quiet Room for this event.
+      - A multi-denominational Prayer Room is located on the [Lower Level](https://www.google.com/url?q=https://www.cmu.edu/cohon-university-center/images/floor-plans/cohon-center-building-map-ll.pdf&sa=D&source=editors&ust=1762905357308724&usg=AOvVaw0gM1AdG9lMcyPn5kNSMAjd) of the CUC.
+
+      ## Lactation Space
+
+      - A lactation space can be made available to you during the event. Please email Jessica Benner ([jbenner@andrew.cmu.edu](mailto:jbenner@andrew.cmu.edu)) with the word “lactation” in the subject line to request access.
+
+      ## Registration
+
+      The registration table will be outside of the Rangos Ballroom starting at 8:30 am. There will be coffee available starting at 8:45 am. You can come for all or just part of the day.
+
+      ## Dropping Off Materials For The Open House
+
+      - You can park in the East Campus Garage and enter the CUC  (the first 30 minutes in the garage are free).
+      - You may be able to use the pull offs (with hazard lights) on Forbes in front of the CUC or on Frew Street near Hunt Library.
+
+      ## Transport
+
+      ### Bicycles
+
+      CMU now has [Dismount Zones](https://www.google.com/url?q=https://www.cmu.edu/transportation/wheels/dismount.html&sa=D&source=editors&ust=1762905357310494&usg=AOvVaw3xWl74V2MeZhOFoB3WKU_w) where bikes should be dismounted and walked on the path. [Bike racks](https://www.google.com/url?q=https://www.cmu.edu/transportation/wheels/index.html&sa=D&source=editors&ust=1762905357310774&usg=AOvVaw3clRZkXUqC7BOSbGqyGZbH) are located across campus. There is a bike rack outside of the Cohon University Center - Forbes Ave entrance. If you prefer to park in a covered area, the East Garage has a bike rack near the entrance of the garage.
+
+      The closest POGOH station is in front of [TCS Hall](https://www.google.com/url?q=https://maps.app.goo.gl/zurD3ovoAPcJ7hQL6&sa=D&source=editors&ust=1762905357311414&usg=AOvVaw2R7jbnmIMT0R3tLl8pl9RT) on Forbes Ave.
+
+      Public Transit
+
+      CMU is served by 61s and 71s and many other lines. [Various apps](https://www.google.com/url?q=https://www.rideprt.org/inside-Pittsburgh-Regional-Transit/rider-info/mobile-applications/&sa=D&source=editors&ust=1762905357311807&usg=AOvVaw2ejY1T32CgbAysbrXokZMh) can be used to find Bus Schedules including Google Maps, the Transit app or PRT’s Ready2Ride app. The main stops are at “Forbes Ave and Morewood Ave” and “Park Plaza on Craig St”.
+
+      - “Forbes Ave and Morewood Ave” is right in front of the CUC.
+      - “Park Plaza on Craig St” is about 10 minutes walk from Fifth and Craig Streets. Walk down Craig Street towards Forbes Ave. Turn left and walk up Forbes Avenue to Forbes and Morewood.
+
+      ### PARKING
+
+      [CMU Visitor Parking website](https://www.google.com/url?q=https://www.cmu.edu/transportation/park/visitor.html&sa=D&source=editors&ust=1762905357313155&usg=AOvVaw2PdPWUD_s8ZTv0aaHHtZi8)
+
+      There are several options for parking. Along Forbes Avenue, CMU’s East Garage is a good option with a maximum rate of $22. There are also Metered Parking options along Schenley Drive and Circuit Road near the Westinghouse Memorial. You can read more about the options at the link above.
+
+      #### Reserve a spot in Morewood Lot
+
+      [1048 Morewood Ave., Pittsburgh, PA 15213](https://www.google.com/url?q=https://maps.app.goo.gl/z7tcSvTqeun6Nj5i6&sa=D&source=editors&ust=1762905357314246&usg=AOvVaw38-W4ngCycaVKA_TChomQm)
+
+      Campus visitors can pre-book parking spaces in the gated portion of the Morewood Lot via the [ParkMobile app](https://www.google.com/url?q=https://parkmobile.io/&sa=D&source=editors&ust=1762905357314522&usg=AOvVaw0huLowZIcnryOhkPmqtZsN) – just pre-pay for your spot online and scan the app’s QR code at the entrance gate.

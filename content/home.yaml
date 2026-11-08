@@ -1,0 +1,36 @@
+# Home page. Rich text fields (body) are Markdown.
+title: GIS Day
+subtitle: "2026"
+
+event:
+  date: November 13th, 2026
+  location:
+    - 2nd Floor
+    - Cohon University Center
+  campus: CMU
+
+# Shown below the event details, above the menu.
+body: "GIS Day is celebrated on the 3rd Wednesday of November as an international forum for users of GIS technology to demonstrate real-world applications that are making a difference in society and for people to learn more about Geographic Information Systems (GIS) and its benefits."
+
+# Menu buttons, in order. Colors cycle automatically.
+menu:
+  - title: Program
+    href: /program/
+  - title: Maps
+    href: /maps/
+  - title: Tabling
+    href: /tabling/
+  - title: Resources
+    href: /resources/
+  - title: About
+    href: /about/
+
+# Sponsor logos, in order. logo is a path under public/ (optional);
+# url is optional. Example:
+#   - name: CMU Libraries
+#     logo: /images/cmu_libraries_logo.webp
+#     url: https://www.library.cmu.edu/
+sponsors: [ ]
+
+# MIDI file under public/ played by the player at the bottom.
+music: /Still not a player - Big Pun.mid

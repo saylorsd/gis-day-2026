@@ -1,0 +1,8 @@
+# Tabling groups. organization is an id from organizations.yaml (optional).
+# Example:
+#   - name: WPRDC
+#     organization: wprdc
+#     table_number: "3"
+#     description: Open data for the region.
+title: Tabling
+tables: []
