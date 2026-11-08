@@ -1,7 +1,99 @@
-# Map gallery. creators are ids from people.yaml. Example:
+# Map gallery and research posters. creators are ids from people.yaml. Example:
 #   - title: Pittsburgh Bridges
 #     creators: [steve-saylor]
 #     description: |
 #       Every bridge in the city.
 title: Maps
-maps: []
+
+maps:
+  - title: Receptacles and Public Seating at Pitt
+    creators: [ helen-bates ]
+    description: |
+      Students enrolled in the University of Pittsburgh’s Applied GIS course used Trimble locational technology and ArcGIS Field Maps to plot every type of public seating and receptacles on the university’s property. We visualized this data on two separate heat maps and selected a focus area where there is a need for additional seating and receptacles. The information can be used to improve campus accessibility, plan for additional amenities, and to promote sustainability.
+  - title: "SEACyclone 2025: Mapping Potential Flood Exposure in Southeast Asia"
+    creators: [ andini-daulay ]
+    description: |
+      A storm crosses borders, but its impacts are felt locally in homes, farms, and communities facing the difficult task of recovery. SEACyclone 2025 explores potential flood exposure in Indonesia, Malaysia, and Thailand following a late November 2025 cyclone, asking: Where might flooding affect communities, and what could recovery require?
+
+      This map shares the first part of that story. It brings together heavy rainfall, where people live, and how land is used to highlight places potentially exposed to flooding. Through GIS, these layers reveal connections that rainfall totals alone cannot show, helping viewers see where a regional storm could intersect with everyday lives and livelihoods.
+
+      The mapped areas represent potential exposure rather than confirmed flooding. They offer a starting point for thinking about where further assessment, emergency assistance, and preparedness resources may be needed.
+
+      The story continues beyond the map. The broader project explores preliminary recovery cost scenarios and how spatial information can inform decisions about rebuilding. Scan the QR code to explore the full ArcGIS StoryMap, including the analysis, findings, and limitations.
+  - title: Population Density and Distance to Inland Water in Pennsylvania
+    creators: [ nana-oye-djan ]
+    description: |
+      This map shows where people live in Pennsylvania and how far each area is from inland water. The height of each spike represents population density, drawn from a roughly 1 km population grid for 2020, so taller spikes mark more densely populated places. The tallest clusters appear around Philadelphia in the southeast and Pittsburgh in the southwest, with smaller clusters at other cities and towns. Large parts of the state have little relief, which reflects low population density.
+      The color shows distance to the nearest inland water, in kilometers. Light blue areas are close to water, and brown areas are farther away.
+  - title: SOUL Tree Inventory and Audit 2026
+    creators: [ jazmin-castillo ]
+    description: |
+      The SOUL Tree Audit Map represents a tree inventory and tree audit conducted by Sustaining Our Urban Landscape (SOUL). SOUL is a nonprofit organization working to reforest Greater New Orleans since 2016. In the summer of 2026, I helped the organization set up and implement a tree auditing process to check on the health status and condition of the organization's planted tree population a decade post-planting. The auditing process was conducted utilizing ArcGIS Field Maps and having trained staff and volunteers inspect and gather up to date information about a selected sample of trees in the field. The submitted map represents tree locations and their health status using the results from the tree audit. There is also a linked ArcGIS Story Map with more detailed results and findings from the tree audit.
+  - title: Copenhagen Cloudburst Plan - an innovative flood retention strategy
+    creators: [ julia-twardzisz ]
+    description: |
+      In 2011 Copenhagen experienced a sudden massive downpour of rain, overwhelming sewers and storm drains and flooding large parts of the city. After this unprecedented event, the city launched its proposed Cloudburst Plan, which aimed to safeguard Copenhagen against such events in the future. Eight intervention typologies were implemented in the proposed city plan: retention parks, plazas, streets, green streets, urban creeks, urban canals, retention boulevards, and boulevards. Since the entire network of interventions is still in the stages of implementation, the data for all projects is not yet available. Therefore, for the purpose of this analysis, just the retention parks were the focus. In the event of a flood, those would create large reservoirs to temporarily store the large amounts of water in their landscapes, sloped lawns, swales, or gutters. The project aims to consider the water retention capacity of the parks in the event of various flooding scenarios. Future developments of the work should include an expanded network of the Copenhagen Cloudburst Plan.
+  - title: Tactile Map
+    creators: [ melinda-angeles ]
+    description: |
+      I plan to make a tactile map of the University Center (GIS Day spaces) or a region (my neighborhood, the City of Pittsburgh, or Allegheny County).
+  - title: "ReCoFire: Vegetation Change and Active Fire Patterns in West Kalimantan"
+    creators: [ andini-daulay ]
+    description: |
+      In July 2026, smoke from fires in West Kalimantan, Indonesia, reached neighboring Sarawak, Malaysia. This map brings the focus back to the landscape where the smoke originated, showing how fire activity and vegetation conditions changed from May through September.
+
+      The upper panels show the Normalized Burn Ratio (NBR), which uses Landsat 8’s near-infrared (Band 5) and shortwave infrared (Band 7) measurements to detect vegetation disturbance. The lower panels show red points where NASA FIRMS reported active fires or other heat anomalies.
+
+      The August–September panels show dense clusters of fire detections alongside lighter patches in parts of western and central West Kalimantan. That overlap points to places where fires may have affected vegetation and where a closer look could help clarify the extent of the damage.
+
+posters:
+  - title: A GeoAI social vulnerability detection tool
+    creators: [ julia-twardzisz ]
+    description: |
+      Hyper-scale data centers are expanding across the U.S., yet few tools show how their locations relate to communities with high social need. This project tests whether a GeoAI approach can screen for such communities nationwide using only two reference cities using the GeoAI embeddings tool. Using two cities and their vulnerability indexes as input data - Los Angeles (CDC/ATSDR Social Vulnerability Index) and Pittsburgh (Allegheny County Community Need Index) - the tool extracts high need areas and expands them across the entire country. The created dashboard assesses the proximity of the high-need cells to the nearest data center locations in order to prioritize areas, which might need greatest support in policy implementations.
+  - title: Analyzing Social Return on Investment of Community Development Projects
+    creators: [ ellen-kinnee ]
+    description: |
+      Goal: Document the economic, social, and environmental value of various community-led
+      development projects in southwestern Pennsylvania
+      The Problem: Traditional impact reporting often focuses too narrowly on direct economic returns rather than indirect and long-term social, environmental and quality-of-life benefits to the community.
+      Scope: Covers a wide range of sectors including food systems, agricultural workforce development, arts, solar energy, transportation, and neighborhood revitalization.
+      Target Audience/Outcome: Designed to provide funders, policymakers, and the public with evidence to support expanded investment in community-led initiatives.
+  - title: NAVIX- A GeoAI Pedestrian layer for Personalized Navigation
+    creators: [ aashritha-jaladi ]
+    description: |
+      Navix starts with a simple spatial question: is the shortest route always the right one? For the 1 in 4 U.S. adults living with a disability, one missing curb ramp, a steep block or a closed sidewalk can make a six-minute walk impossible, and today’s maps give no warning. Navix is a GeoAI pedestrian layer that reads the city the way different bodies experience it. Piloted in Downtown Mountain View, it fuses the city’s GIS sidewalk network with deep-learning semantic segmentation of 0.30 m aerial imagery, text-prompted SAM 3 segmentation of Mapillary street-level photos, USGS elevation for running grade, and live city closure and 311 data. All of this goes into one edge table where every attribute carries a source and a confidence. Profile-specific cost functions for wheelchair, low vision and stroller users then re-weight the same network, and a least-cost routing engine returns a different route for each, labelled verified, unverified or blocked. Early results show 30 of 38 aerial checks correct with no false positives, and 83–100% precision on street-level detection. The result is not one map for everyone, but one city with different paths.
+  - title: "Mapping Water Justice: Impaired Streams and Environmental Justice Areas in Southwestern Pennsylvania"
+    creators: [ andini-daulay ]
+    description: |
+      Where do impaired waterways and environmental justice concerns intersect? Developed through my volunteer GIS work with Three Rivers Waterkeeper, this project explores this question across the organization’s southwestern Pennsylvania jurisdiction.
+
+      The analysis combines Pennsylvania Department of Environmental Protection water quality assessments, environmental justice boundaries, and watershed boundaries in ArcGIS. Approximately 720 miles of impaired waterways intersect environmental justice areas, with overlaps occurring in 68 of 94 small watersheds. Aquatic life accounts for the largest share of impaired stream-use miles.
+
+      These spatial findings add community context to water quality assessments and can inform monitoring priorities, outreach, and watershed protection. For an organization with limited resources, mapping these intersections can help identify locations for closer investigation and support discussions about monitoring coverage and resource allocation.
+
+      The poster communicates these patterns through maps and charts for a broad audience. Findings demonstrate spatial overlap but do not establish causation, residents’ exposure, or higher impairment rates within environmental justice areas. Further investigation can combine these results with monitoring data and community knowledge to guide action.
+  - title: SEACyclone 2025
+    creators: [ andini-daulay ]
+    description: |
+      How can geospatial analysis inform disaster recovery policies and more realistic budget coverage? SEACyclone 2025 explores this question by mapping potential flood exposure in Indonesia, Malaysia, and Thailand following extreme rainfall in November 2025.
+
+      The project combines rainfall, population, and land cover data in ArcGIS. Approximately 2,006 km² met the model’s exposure criteria, with the largest share in Indonesia. Recovery cost scenarios explore how different land cover types and reconstruction assumptions affect potential funding needs.
+
+      The poster connects spatial findings with policy recommendations and budgeting: identifying locations for closer assessment, distinguishing agricultural restoration from infrastructure reconstruction, and considering how limited funds could cover different recovery needs. This approach illustrates how geographically targeted budgets could better reflect local conditions and support more realistic service and recovery coverage.
+
+      Motivated partly by flooding in my home region of North Sumatra, the project demonstrates how GIS can communicate disaster information to nontechnical audiences. Results represent potential exposure, while flood extent, damage, and cost assumptions require further investigation before guiding funding allocations.
+  - title: "Property, Race, & Grade: The Effects of Redlining on Baltimore's Current Neighborhood Demographics and Median Property Values"
+    creators: [ mitchell-chernick ]
+    description: |
+      My submission uses maps to identify the effects that the Home Owner's Loan Corporation's (HOLC) neighborhood grades from 1937 have had on current neighborhood racial distribution and current Neighborhood Median Property Value (NMPV).
+
+      What I found was that gentrification and white flight have led neighborhood racial demographics to diverge from the historical distribution determined by HOLC Grades (A, B, C, or D). A Grades were the best and were given to wealthy and White neighborhoods, while D Grades were the worst and were given to poor Black neighborhoods. People in A Grade neighborhoods were able to easily get favorable mortgages while those in D Grade neighborhoods were almost never able to get a mortgage.
+
+      Additionally, I found that the NMPVs for neighborhoods of each grade have ranges hundreds of thousands of dollars wide, and that where a neighborhood's NMPV falls within the range of their grade generally corresponds to the neighborhood's current racial majority.
+
+      My conclusions from my maps and findings were that HOLC neighborhood Grades no longer strongly indicate current neighborhood demographics or NMPV. Instead, current neighborhood demographics have a much stronger effect on NMPV.
+  - title: "They cross bridges for their pets: mapping access to veterinary services."
+    creators: [ mary-elizabeth-rauktis ]
+    description: |
+      Three-fourths of Americans have companion animals (pets). These animals require ongoing veterinary checkups and vaccinations which improve quality of life and reduce zoonosis (transmission of disease from animal to human).  However, veterinary care is difficult to access due to financial models of care (private equity), lack of transportation, as well as veterinary deserts where no care exists.  Animal Friends community outreach offers vaccination clinics in the summer and fall to meet the need for vaccinations. This research poster asks the questions: (1) where are people coming from in relation to the clinic location; (2) is there a relationship between clinic locations --. are people coming across the county for vaccinations according to distance theory (distance rather than need driving access)? This research poster displays six maps of each clinic as well as the flow diagram and a map of the veterinary landscape of the county in order to answer these questions. All maps were created using ArcGIS through the University of Pittsburgh ULS and the School of Social Work, and Animal Friends. The maps suggest that veterinary need is the motivation for owners driving long distances, and in particular the need for a repeat (booster) vaccination. Suggestions for future research as well as clinic management are included in this poster.

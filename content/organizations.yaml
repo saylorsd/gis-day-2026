@@ -1,4 +1,4 @@
-# Organizations, keyed by a short id used in people.yaml and tabling.yaml.
+# Organizations, keyed by a short id used in people.yaml and tables.yaml.
 pitt:
   name: University of Pittsburgh
 cmu:
@@ -12,3 +12,13 @@ acaa:
 wprdc:
   name: Western PA Regional Data Center
   website: https://wprdc.org
+soul:
+  name: Sustaining Our Urban Landscape (SOUL)
+allegheny-county:
+  name: Allegheny County
+clp:
+  name: Carnegie Library of Pittsburgh
+civicmapper:
+  name: CivicMapper
+mma:
+  name: Monroeville Municipal Authority

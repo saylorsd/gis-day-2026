@@ -63,3 +63,29 @@
     @apply block w-full max-w-md mx-auto;
     --pad-y: 0.75rem;
 }
+
+/* 90s Windows 95 sunken text field: dark edge top-left, light edge bottom-right */
+.field {
+    --bevel: 2px;
+
+    background-color: #ffffff;
+    color: #000000;
+    font-family: "Times New Roman", Arial, sans-serif;
+    padding: calc(var(--bevel) * 2 + 0.5rem) calc(var(--bevel) * 2 + 0.75rem);
+    border: none;
+    box-sizing: border-box;
+
+    /* Two-layer bevel, the inverse of .btn: gray/white outer edge, black/light gray inner edge */
+    box-shadow: inset var(--bevel) var(--bevel) 0 #808080,
+    inset calc(var(--bevel) * -1) calc(var(--bevel) * -1) 0 #ffffff,
+    inset calc(var(--bevel) * 2) calc(var(--bevel) * 2) 0 #000000,
+    inset calc(var(--bevel) * -2) calc(var(--bevel) * -2) 0 #dfdfdf;
+}
+
+.field > :first-child {
+    margin-top: 0;
+}
+
+.field > :last-child {
+    margin-bottom: 0;
+}

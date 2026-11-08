@@ -11,7 +11,7 @@ Built with Next.js (static export) and Tailwind. Site content lives in YAML file
 | `content/home.yaml`          | Home page: event details, intro, menu  |
 | `content/program.yaml`       | Program / agenda                       |
 | `content/maps.yaml`          | Maps page                              |
-| `content/tabling.yaml`       | Tabling page                           |
+| `content/tables.yaml`        | Tables page                            |
 | `content/people.yaml`        | People referenced by other pages       |
 | `content/organizations.yaml` | Organizations referenced by people     |
 | `content/pages/*.yaml`       | Simple pages, served at `/<filename>/` |

@@ -1,4 +1,4 @@
-import { Linebreaks } from "@/components/Markdown";
+import { Details } from "@/components/Details";
 import { People } from "@/components/People";
 import { program, type Session, type Subsession, type Talk } from "@/lib/content";
 import { clockTime } from "@/lib/time";
@@ -71,7 +71,7 @@ function TalkBlock({ talk }: { talk: Talk }) {
         <article className="mb-8">
             <h4 className="m-0">{talk.title}</h4>
             <People people={talk.speakers} />
-            {talk.description && <Linebreaks text={talk.description} />}
+            <Details text={talk.description} />
         </article>
     );
 }

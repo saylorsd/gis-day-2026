@@ -10,7 +10,7 @@ event:
   campus: CMU
 
 # Shown below the event details, above the menu.
-body: "GIS Day is celebrated on the 3rd Wednesday of November as an international forum for users of GIS technology to demonstrate real-world applications that are making a difference in society and for people to learn more about Geographic Information Systems (GIS) and its benefits."
+body: "GIS Day is celebrated in November as an international forum for users of GIS technology to demonstrate real-world applications that are making a difference in society and for people to learn more about Geographic Information Systems (GIS) and its benefits."
 
 # Menu buttons, in order. Colors cycle automatically.
 menu:
@@ -18,8 +18,8 @@ menu:
     href: /program/
   - title: Maps
     href: /maps/
-  - title: Tabling
-    href: /tabling/
+  - title: Tables
+    href: /tables/
   - title: Resources
     href: /resources/
   - title: About

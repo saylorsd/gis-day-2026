@@ -1,0 +1,42 @@
+# Tables. organization is an id from organizations.yaml (optional).
+# Example:
+#   - name: WPRDC
+#     organization: wprdc
+#     table_number: "3"
+#     description: Open data for the region.
+title: Tabling
+
+tables:
+  - name: Sidewalk Accessibility Walk Audit
+    organization: cmu
+    description: |
+      In partnership with our existing contacts at the CMU Mapping club, CMU Ramp Accessibility Group, and BikePGH, we would like to host a 1 hour accessibility walk audit of CMU (reaching to South Squirrel Hill if enough people are interested). This will involve a 20 minute training followed by splitting into groups of 2-5 to map out where campus can have better sidewalk accessibility!
+      https://www.pittsburghwalks.org/safesidewalks
+  - name: Carnegie Library of Pittsburgh
+    organization: clp
+    description: |
+      Carnegie Library of Pittsburgh - Family & Local History department will be featuring map resources available through the library system, physical collections of maps, and regional maps of historic significance.
+  - name: "MapReader: Open-Source Software for Computational Map Studies"
+    organization: cmu
+    description: |
+      Table to share MapReader software with local GIS community, including hands-on demos and opportunity to speak with me about potential uses of MapReader. I can also bring past posters to display.
+  - name: CMU University Libraries
+    organization: cmu
+    description: |
+      This would be a collaborative table for CMU Libraries staff and faculty to host an activity(ies) such as button making.
+  - name: "UCSUR & WPRDC"
+    organization: pitt
+    description: |
+      See what Pitt's University Center for Social and Urban Research (UCSUR) and the Western Pennsylvania Regional Data Center (WPRDC) are doing with GIS in the region.
+  - name: Allegheny County
+    organization: allegheny-county
+    description: |
+      Show off our awesome GIS group!
+  - name: Mapping Water in Western PA
+    organization: civicmapper
+    description: |
+      Showing off various efforts to map and quantify water in Southwestern PA with maps and apps.
+  - name: Monroeville Municipal Authority GIS
+    organization: mma
+    description: |
+      We would like to recruit a GIS Intern for the summer of 2027

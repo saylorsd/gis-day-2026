@@ -1,7 +1,7 @@
 body {
-    background-image: url('/images/bgworld2.jpg');
+    background-image: url("/images/bgworld2.jpg");
     @apply text-center;
-    @apply w-full px-0 m-0;
+    @apply m-0 w-full px-0;
     @apply text-lg;
 }
 
@@ -28,7 +28,6 @@ th {
 }
 
 .content {
-
 }
 
 .content p,
@@ -37,4 +36,8 @@ th {
 .content li {
     @apply text-xl font-medium;
     @apply text-left;
+}
+
+.home-content p {
+    @apply m-0;
 }

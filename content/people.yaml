@@ -35,3 +35,37 @@ uma-gupta:
   name: Uma Gupta
   department: Department of Planning, Design, and Construction
   organization: pitt
+helen-bates:
+  name: Helen Bates
+  organization: pitt
+andini-daulay:
+  name: Andini Daulay
+  department: School of Public and International Affairs
+  organization: pitt
+nana-oye-djan:
+  name: Nana Oye Djan
+  organization: cmu
+jazmin-castillo:
+  name: Jazmin Castillo
+  organization: soul
+julia-twardzisz:
+  name: Julia Twardzisz
+  organization: cmu
+violet-mullenix:
+  name: Violet Mullenix
+  organization: pitt
+melinda-angeles:
+  name: Melinda Angeles
+  organization: allegheny-county
+ellen-kinnee:
+  name: Ellen Kinnee
+  organization: pitt
+aashritha-jaladi:
+  name: Aashritha Jaladi
+  organization: cmu
+mitchell-chernick:
+  name: Mitchell Chernick
+  organization: pitt
+mary-elizabeth-rauktis:
+  name: Mary Elizabeth Rauktis
+  organization: pitt

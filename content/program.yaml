@@ -13,14 +13,26 @@ sessions:
     subsessions:
       - talks:
           - title: Urban Studies Applied GIS Student Survey
-            speakers: [skylar-roth]
+            speakers: [ skylar-roth ]
+            description: |
+              Lightning Talk to detail Applied GIS student survey (bench/seating and receptacles) for Offices of Planning, Design, and Construction. How surveys were created, obstacles, and future work with data.
           - title: "Teaching GeoAI: Building Foundations for Spatial Judgment"
-            speakers: [suzy-li]
+            speakers: [ suzy-li ]
+            description: |
+              How can a GeoAI course prepare students to tackle spatial questions beyond those covered in class? This lightning talk shares my approach to teaching GeoAI: Advanced GIS for Policy and Design at Carnegie Mellon University.
+
+              The course builds foundations in raster analysis, remote sensing, basic statistics, and machine learning. Students learn transferable workflows that they can independently research, adapt, and extend. An NDVI exercise, for example, provides a starting point for exploring other spectral indices relevant to their projects. Flexible assignment options accommodate different technical backgrounds and interests while supporting shared learning goals.
+
+              Examples from seven student projects illustrate how students apply and extend these approaches to challenges including accessible navigation, urban heat, and infrastructure impacts. Throughout, the course emphasizes spatial judgment: asking useful questions, choosing appropriate tools, checking what models reveal or miss, and recognizing where human and community knowledge must guide consequential policy and design decisions.
       - talks:
           - title: Who Let the Heat Out? Campus Growth and Neighborhood Warming Across Twelve Pittsburgh Institutions
-            speakers: [stuti-garg, yash-shah]
+            speakers: [ stuti-garg, yash-shah ]
+            description: |
+              Large hospital and university campuses grow inside older Pittsburgh neighborhoods, yet the city’s Institutional Master Plan review has no spatial record of how that growth affects local heat. We asked whether twelve Educational and Medical Institution campuses warmed relative to the city between 2015 and 2025, whether warming reached adjacent blocks, and whether hospitals and universities differ. Using 13,990 one-hectare hexagons, two Landsat scenes, and city-relative surface temperature anomalies, we modeled change with generalized linear regression, Moran’s I, and Getis-Ord hot spots, and classified one-meter NAIP imagery into canopy, grass, building, and pavement with a support vector machine. Institutional campuses did not warm as a class, which rejected our hypothesis, but hospital campuses behaved like ordinary urban land and sat 0.56 to 0.78°C warmer than universities across all three distance bands. Hospitals are warm because they are already bare, not because they are clearing trees. We treat the result as a screening aid for Master Plan review, with human verification, and propose image embeddings to scale the approach to other cities.
           - title: New spatial features on the WPRDC
-            speakers: [steve-saylor]
+            speakers: [ steve-saylor ]
+            description: |
+              This talk will cover new geospatial features available at the Western PA Regional Data Center (WPRDC).  Learn how to use our tile server to performantly render large local datasets in your maps and how to make PostGIS spatial queries against the WPRDC datasets in the API.
 
   - name: Lightning Session 2
     start: "10:15"
@@ -28,11 +40,22 @@ sessions:
     subsessions:
       - talks:
           - title: Mapping Pittsburgh Community Theaters
-            speakers: [caitlin-young]
+            speakers: [ caitlin-young ]
+            description: |
+              The Pittsburgh Community Theaters storymap serves as a way to connect people to community organizations that they can visit, participate in, or donate to. Initially created for the Community Theater Showcase at the Public Theater this spring, the map continues to be shared to drive growth for these organizations as people realize that there are arts opportunities in their backyard.
+
+              StoryMap: https://storymaps.arcgis.com/stories/583130fc28124cea9cbf0b80fd9ec4f4
           - title: The Fayette ATLAS Project
-            speakers: [noah-held]
+            speakers: [ noah-held ]
+            description: |
+              Fay-Penn Economic Development Council works to strengthen Fayette County’s economy by supporting business growth, attracting investment, and promoting community development. Through partnerships with businesses, municipalities, and community organizations, Fay-Penn strives to improve the county’s economic opportunities and quality of life for its residents.
+              Geographic Information Systems (GIS) supports this mission by organizing, analyzing, and visualizing geographic data to improve planning and decision-making. Over the past several months, I’ve developed maps and geospatial resources to support Fay-Penn’s initiatives. Our general county map highlights business parks, property locations, nature parks, state game lands, roadways, and municipalities, providing a valuable reference for economic development and planning.
+              Beyond mapping, GIS helps identify opportunities, support grant applications, and improve access to information. The broader goal is to establish Fayette ATLAS as a collaborative GIS resource for municipalities, businesses, nonprofits, and regional partners.
+              By strengthening data management, accessibility, and collaboration, Fayette ATLAS can reduce duplicated efforts, support informed decisions, and help promote sustainable economic growth throughout Fayette County.
           - title: Carnegie Mellon University Arboretum Tour
-            speakers: [taki-dai]
+            speakers: [ taki-dai ]
+            description: |
+              This lightning talk presents Carnegie Mellon University Arboretum Tour, an ArcGIS StoryMap exploring Gates Garden, Pollinator Garden, and Peace Garden. The tour begins with an overview map of the three gardens, then allows visitors to select individual trees and learn about them through photographs and species profiles. Each profile introduces the tree’s common and scientific names, origins, preferred habitat, identifying features, ecological roles, and cultural uses. These details connect what visitors see on campus with stories they might otherwise miss. For example, quaking aspens can share an underground root system, while eastern white pines provide food for birds and small mammals. The paperbark maple’s peeling, cinnamon-colored bark gives visitors something distinctive to look for on their next walk. By connecting these stories to specific locations, the project helps students, staff, and visitors recognize trees they may pass every day. Visitors can explore the gardens online or use the maps to guide their own campus walks. The presentation will demonstrate how interactive mapping and plant stories come together to make the Arboretum’s collection easier to explore and encourage people to look more closely at familiar campus spaces.
 
   - name: Lightning Session 3
     start: "11:15"
@@ -40,8 +63,19 @@ sessions:
     subsessions:
       - talks:
           - title: "Loafometry: Dimensions of Deliciousness"
-            speakers: [matt-mercurio]
+            speakers: [ matt-mercurio ]
+            description: |
+              Bread loaf shape tells a lot about the loaf (and baker?) quality. The Pix4D Catch app is typically used for capturing geospatially accurate 3D models of assets using a smartphone and optionally a high accuracy GNSS receiver. Naturally, one may ask: Can 3D modeling help assess loaf quality for a single bake and over time? Luckily for yinz, the answer is yes. Going to show off some 3D models of some bread loaves captured using Pix4D Catch on my continuing journey from 0 to 100 loaves. Potentially attempt a live demo of capturing a 3D loaf model!
           - title: "GIS Beyond the Airfield: Bringing Airports Indoors"
-            speakers: [sydney-lytle]
+            speakers: [ sydney-lytle ]
+            description: |
+              My lightning talk will be about the use of ArcGIS Indoors at Pittsburgh International Airport (PIT) and how it benefits our Facilities & Maintenance, and Lease & Space Management teams. Our trades teams can quickly search and find a unit that is identified in a work order, and our real estate team uses the system to identify vacant spaces and their square footages.
           - title: ArcGIS Indoors? a floor-aware indoor GIS map of all Pitt campus
-            speakers: [uma-gupta]
+            speakers: [ uma-gupta ]
+            description: |
+              This initiative creates a floor-aware indoor GIS map of all Pitt campus buildings by connecting existing AutoCAD floor plans to ArcGIS Online. Room polygons are attributed from ARCHIBUS (the space management system of record). The data model is designed to be compatible with ArcGIS Indoors when that license is acquired, and the work serves as a bridge until Revit becomes the authoring environment in 2027
+
+              Our submission walks users through the process of automating georeferencing across hundreds of CAD drawings to encourage and simplify transition to ArcGIS Indoors, while demonstrating the value of this data management method for space teams via experience builder demo and seminar discussion.
+  - name: Lunch
+    start: "12:00"
+    end: "13:00"
