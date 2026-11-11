@@ -1,10 +1,11 @@
 import {Markdown} from "@/components/Markdown";
+import {MidiPlayer} from "@/components/MidiPlayer";
 import {home} from "@/lib/content";
 
 // Windows 95 16-color palette, cycled over the menu buttons.
-const MENU_COLORS = ["text-[#800000]", "text-[#000080]", "text-[#008000]", "text-[#800080]", "text-[#008080]"];
+const MENU_COLORS = ["text-[#800000]", "text-[#000080]", "text-[#005000]", "text-[#800080]", "text-[#005050]"];
 
-export const metadata = {title: home().title};
+export const metadata = {title: home().title, description: home().description};
 
 export default function HomePage() {
   const {event, body, menu, sponsors, music} = home();
@@ -29,7 +30,7 @@ export default function HomePage() {
           </div>
         </div>
         {/* @ts-expect-error <marquee> is obsolete but fits the style of this site and serves no informational purpose*/}
-        <marquee className="text-xl font-bold italic m-0 leading-none mt-1 text-pink-600">
+        <marquee className="text-xl font-bold italic m-0 leading-none mt-1 text-pink-800">
           GIS DAY&nbsp;&nbsp;&nbsp;&nbsp;
           GIS DAY&nbsp;&nbsp;&nbsp;&nbsp;
           GIS DAY&nbsp;&nbsp;&nbsp;&nbsp;
@@ -70,19 +71,14 @@ export default function HomePage() {
           </section>
         )}
       </main>
-      {music && (
-        <midi-player
-          src={encodeURI(music)}
-          sound-font="https://storage.googleapis.com/magentadata/js/soundfonts/sgm_plus"
-        />
-      )}
+      {music && <MidiPlayer src={music}/>}
 
       <footer className="max-w-2xl mx-auto">
         <img
           src="/images/Crono_critical.gif" alt="Crono from Chrono Trigger"
           className="mx-auto inline-block size-12 mb-0"/>
         <p
-          className="inline-block text-center text-sm text-gray-500">© 2026 Steve Saylor & Pittsburgh GIS Day
+          className="inline-block text-center text-sm text-gray-600">© 2026 Steve Saylor & Pittsburgh GIS Day
           Steering
           Committee
         </p>

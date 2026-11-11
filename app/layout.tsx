@@ -4,7 +4,11 @@ import { ACCESSIBILITY_SCRIPT } from "@/components/AccessibilityMenu";
 import { Header } from "@/components/Header";
 import "./styles/globals.css";
 
-export const metadata: Metadata = { title: "GIS Day" };
+export const metadata: Metadata = {
+    title: "GIS Day",
+    // Fallback for pages that don't set their own.
+    description: "Pittsburgh GIS Day 2026, November 13 at Carnegie Mellon University's Cohon University Center.",
+};
 export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

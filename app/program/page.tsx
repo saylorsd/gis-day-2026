@@ -10,7 +10,7 @@ import {
 } from "@/lib/content";
 import { clockTime } from "@/lib/time";
 
-export const metadata = { title: program().title };
+export const metadata = { title: program().title, description: program().description };
 
 export default function ProgramPage() {
   const { sessions } = program();

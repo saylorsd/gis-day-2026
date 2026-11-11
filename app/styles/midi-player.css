@@ -66,6 +66,7 @@ midi-player::part(play-button):focus-visible {
 /* Time readout in a sunken white field */
 midi-player::part(time) {
     background: #ffffff;
+    color: #000000;
     padding: 0.125rem 0.5rem;
     font-variant-numeric: tabular-nums;
     box-shadow: inset var(--bevel) var(--bevel) 0 #808080,

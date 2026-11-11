@@ -2,6 +2,7 @@
 # body is a list of blocks: "markdown" (Markdown text) or "table"
 # (columns, then rows keyed by column; a list in a cell = one item per line).
 title: Resources
+description: "Accessibility, location, transportation, Wi-Fi, quiet spaces, registration and other information for attending Pittsburgh GIS Day 2026 at CMU's Cohon University Center."
 body:
   - markdown: |
       Events for Carnegie Mellon University Libraries are open to all, regardless of race, color, national origin, sex, disability, age, sexual orientation, gender identity, religion, creed, ancestry, belief, veteran status or genetic information.

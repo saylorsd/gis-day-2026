@@ -4,6 +4,7 @@
 #     description: |
 #       Every bridge in the city.
 title: Maps
+description: "Maps and research posters submitted to Pittsburgh GIS Day 2026, from campus seating surveys to flood exposure in Southeast Asia."
 
 maps:
   - title: Receptacles and Public Seating at Pitt

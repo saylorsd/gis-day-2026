@@ -13,6 +13,7 @@
 # Without one, lightning, presentation and meal sessions get a default image
 # (see DEFAULT_SESSION_IMAGES in lib/content.ts); other types get none.
 title: Program
+description: "Schedule for Pittsburgh GIS Day 2026: lightning talks, presentations, lunch, roundtables, the open house and Mappy Hour on November 13 at CMU."
 
 sessions:
   - name: Registration & Breakfast

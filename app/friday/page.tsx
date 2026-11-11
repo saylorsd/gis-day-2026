@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Friday the 13th",
+  description: "Meet Bit, the unofficial mascot of Pittsburgh GIS Day 2026.",
+};
+
 export default async function ContentPage() {
   return (
     <main className="mx-auto max-w-2xl px-4">

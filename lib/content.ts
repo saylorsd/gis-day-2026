@@ -77,6 +77,7 @@ export type Sponsor = { name: string; logo?: string; url?: string };
 
 export type Home = {
   title: string;
+  description?: string;
   subtitle?: string;
   event: { date: string; location: string[]; campus: string };
   body?: string;
@@ -135,6 +136,7 @@ export type Session = {
 
 type RawProgram = {
   title: string;
+  description?: string;
   sessions?: {
     name: string;
     type: string;
@@ -162,7 +164,7 @@ const toMinutes = (file: string, where: string, hhmm: string) => {
 const fromMinutes = (minutes: number) =>
   `${String(Math.floor(minutes / 60)).padStart(2, "0")}:${String(minutes % 60).padStart(2, "0")}`;
 
-export function program(): { title: string; sessions: Session[] } {
+export function program(): { title: string; description?: string; sessions: Session[] } {
   const file = "program.yaml";
   const data = load<RawProgram>(file);
   const sessions = (data.sessions ?? []).map((s) => {
@@ -201,23 +203,28 @@ export function program(): { title: string; sessions: Session[] } {
       subsessions,
     };
   });
-  return {title: data.title, sessions};
+  return {title: data.title, description: data.description, sessions};
 }
 
 // --- Maps & tables ---------------------------------------------------------
 
 export type MapSubmission = { title: string; description?: string; creators: Person[] };
 
-export function maps(): { title: string; maps: MapSubmission[]; posters: MapSubmission[] } {
+export function maps(): { title: string; description?: string; maps: MapSubmission[]; posters: MapSubmission[] } {
   const file = "maps.yaml";
   type RawEntry = { title: string; description?: string; creators?: string[] };
-  type Raw = { title: string; maps?: RawEntry[]; posters?: RawEntry[] };
+  type Raw = { title: string; description?: string; maps?: RawEntry[]; posters?: RawEntry[] };
   const data = load<Raw>(file);
   const resolve = (entries: RawEntry[] | undefined, kind: string) =>
     (entries ?? [])
       .map((m) => ({...m, creators: peopleRefs(file, `${kind} "${m.title}"`, m.creators)}))
       .sort((a, b) => a.title.localeCompare(b.title));
-  return {title: data.title, maps: resolve(data.maps, "map"), posters: resolve(data.posters, "poster")};
+  return {
+    title: data.title,
+    description: data.description,
+    maps: resolve(data.maps, "map"),
+    posters: resolve(data.posters, "poster"),
+  };
 }
 
 export type TablingGroup = {
@@ -227,9 +234,9 @@ export type TablingGroup = {
   description?: string;
 };
 
-export function tabling(): { title: string; tables: TablingGroup[] } {
+export function tabling(): { title: string; description?: string; tables: TablingGroup[] } {
   const file = "tables.yaml";
-  type Raw = { title: string; tables?: (Omit<TablingGroup, "organization"> & { organization?: string })[] };
+  type Raw = { title: string; description?: string; tables?: (Omit<TablingGroup, "organization"> & { organization?: string })[] };
   const data = load<Raw>(file);
   const tables = (data.tables ?? [])
     .map((t) => ({
@@ -238,7 +245,7 @@ export function tabling(): { title: string; tables: TablingGroup[] } {
       organization: organizationRef(file, `table "${t.name}"`, t.organization),
     }))
     .sort((a, b) => a.name.localeCompare(b.name));
-  return {title: data.title, tables};
+  return {title: data.title, description: data.description, tables};
 }
 
 // --- Content pages (content/pages/*.yaml) -----------------------------------

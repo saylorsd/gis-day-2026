@@ -5,6 +5,7 @@
 #     table_number: "3"
 #     description: Open data for the region.
 title: Tabling
+description: "Groups tabling at the Pittsburgh GIS Day 2026 open house, including libraries, local government, universities and regional data organizations."
 
 tables:
   - name: Sidewalk Accessibility Walk Audit

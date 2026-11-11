@@ -2,7 +2,7 @@ import {Details} from "@/components/Details";
 import {People} from "@/components/People";
 import {maps} from "@/lib/content";
 
-export const metadata = {title: maps().title};
+export const metadata = {title: maps().title, description: maps().description};
 
 export default function MapsPage() {
   const {maps: list, posters} = maps();

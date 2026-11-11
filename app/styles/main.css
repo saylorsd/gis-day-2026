@@ -1,4 +1,15 @@
+/*
+ * Explicit colors so contrast checkers (which can't read background images)
+ * measure text against the tile's average color, #f1f1f1. Black on the tile's
+ * darkest pixel is still 12.9:1.
+ */
+html {
+  color-scheme: light;
+}
+
 body {
+  color: #000000;
+  background-color: #f1f1f1;
   background-image: url("/images/bgworld2.jpg");
   @apply text-center;
   @apply m-0 w-full px-0;

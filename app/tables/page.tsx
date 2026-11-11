@@ -2,7 +2,7 @@ import {Details} from "@/components/Details";
 import {tabling} from "@/lib/content";
 import {Linebreaks} from "@/components/Markdown";
 
-export const metadata = {title: tabling().title};
+export const metadata = {title: tabling().title, description: tabling().description};
 
 export default function TablingPage() {
   const {title, tables} = tabling();
