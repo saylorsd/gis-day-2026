@@ -8,7 +8,7 @@ export default function TablingPage() {
   const {title, tables} = tabling();
   return (
     <main className="mx-auto max-w-2xl px-4">
-      <h1>{title}</h1>
+      <h1 className="page-title">{title}</h1>
       <ul className="m-0 pl-0 list-none">
         {tables.length === 0 && <li>Tabling groups coming soon.</li>}
         {tables.map((table, i) => (

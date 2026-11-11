@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
+import { ACCESSIBILITY_SCRIPT } from "@/components/AccessibilityMenu";
 import { Header } from "@/components/Header";
 import "./styles/globals.css";
 
@@ -8,7 +9,11 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        // The head script adds accessibility classes before hydration.
+        <html lang="en" suppressHydrationWarning>
+            <head>
+                <script dangerouslySetInnerHTML={{ __html: ACCESSIBILITY_SCRIPT }} />
+            </head>
             <body>
                 <Header />
                 {children}

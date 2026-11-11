@@ -22,3 +22,9 @@ civicmapper:
   name: CivicMapper
 mma:
   name: Monroeville Municipal Authority
+esri:
+  name: Esri
+larson-design-group:
+  name: Larson Design Group
+pa-geospatial-board:
+  name: Pennsylvania State Geospatial Coordinating Board

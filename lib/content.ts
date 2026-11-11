@@ -102,14 +102,49 @@ export type Talk = {
 
 export type Subsession = { title?: string; qaMinutes: number; talks: Talk[] };
 
-export type Session = { name: string; start: string; end: string; subsessions: Subsession[] };
+export const SESSION_TYPES = ["lightning", "presentation", "meal", "activity", "general", "social"] as const;
+export type SessionType = (typeof SESSION_TYPES)[number];
+
+/** Title image (in public/images/) for sessions that don't set their own `image`. */
+const DEFAULT_SESSION_IMAGES: Partial<Record<SessionType, string>> = {
+  lightning: "bolt-down.gif",
+  presentation: "radio_microphone_lg.gif",
+  meal: "eat.gif",
+};
+
+function imageRef(file: string, where: string, name: string | undefined) {
+  if (!name) return undefined;
+  if (!fs.existsSync(path.join(process.cwd(), "public", "images", name)))
+    fail(file, `${where}: image "${name}" not found in public/images/`);
+  return `/images/${name}`;
+}
+
+export type Session = {
+  name: string;
+  type: SessionType;
+  /** Title image URL, e.g. "/images/eat.gif". */
+  image?: string;
+  start: string;
+  end?: string;
+  organization?: Organization;
+  sponsor?: string;
+  location?: string;
+  description?: string;
+  subsessions: Subsession[];
+};
 
 type RawProgram = {
   title: string;
   sessions?: {
     name: string;
+    type: string;
+    image?: string;
     start: string;
-    end: string;
+    end?: string;
+    organization?: string;
+    sponsor?: string;
+    location?: string;
+    description?: string;
     subsessions?: {
       title?: string;
       qa_minutes?: number;
@@ -134,7 +169,9 @@ export function program(): { title: string; sessions: Session[] } {
     const where = `session "${s.name}"`;
     // Talks run back to back from the session start, with Q&A after each subsession.
     let clock = toMinutes(file, where, s.start);
-    toMinutes(file, where, s.end);
+    if (s.end) toMinutes(file, where, s.end);
+    if (!SESSION_TYPES.includes(s.type as SessionType))
+      fail(file, `${where}: type "${s.type}" should be one of ${SESSION_TYPES.join(", ")}`);
     const subsessions = (s.subsessions ?? []).map((ss) => {
       const talks = (ss.talks ?? []).map((t) => {
         const start = clock;
@@ -151,7 +188,18 @@ export function program(): { title: string; sessions: Session[] } {
       clock += qaMinutes;
       return {title: ss.title, qaMinutes, talks};
     });
-    return {name: s.name, start: s.start, end: s.end, subsessions};
+    return {
+      name: s.name,
+      type: s.type as SessionType,
+      image: imageRef(file, where, s.image ?? DEFAULT_SESSION_IMAGES[s.type as SessionType]),
+      start: s.start,
+      end: s.end,
+      organization: organizationRef(file, where, s.organization),
+      sponsor: s.sponsor,
+      location: s.location,
+      description: s.description,
+      subsessions,
+    };
   });
   return {title: data.title, sessions};
 }

@@ -4,10 +4,33 @@
 # 5 minutes each, with each subsession's Q&A after its last talk.
 # speakers are ids from people.yaml. Optional per talk: description.
 # Optional per subsession: title, qa_minutes (default 5; 0 for none).
+# Each session needs a type: lightning, presentation, meal, activity, general,
+# or social (rendered as class "session-<type>" and data-type="<type>").
+# Optional per session: end, organization (id from organizations.yaml),
+# sponsor, location, description, image. Sessions without talks omit subsessions.
+# image is a file name in public/images/ shown beside the session title, e.g.
+#   image: eat.gif
+# Without one, lightning, presentation and meal sessions get a default image
+# (see DEFAULT_SESSION_IMAGES in lib/content.ts); other types get none.
 title: Program
 
 sessions:
+  - name: Registration & Breakfast
+    type: meal
+    image: breakfast.gif
+    start: "08:15"
+    end: "09:00"
+    sponsor: Esri
+
+  - name: Welcome
+    type: general
+    image: welcome-spin.gif
+    start: "09:00"
+    end: "09:15"
+
   - name: Lightning Session 1
+    type: lightning
+    image: bolt-down.gif
     start: "09:15"
     end: "09:45"
     subsessions:
@@ -34,7 +57,16 @@ sessions:
             description: |
               This talk will cover new geospatial features available at the Western PA Regional Data Center (WPRDC).  Learn how to use our tile server to performantly render large local datasets in your maps and how to make PostGIS spatial queries against the WPRDC datasets in the API.
 
+  - name: "GIS for All: Accessibility in ArcGIS"
+    type: presentation
+    image: radio_microphone_lg.gif
+    start: "09:50"
+    end: "10:15"
+    organization: esri
+
   - name: Lightning Session 2
+    type: lightning
+    image: bolt-down.gif
     start: "10:15"
     end: "10:35"
     subsessions:
@@ -57,9 +89,18 @@ sessions:
             description: |
               This lightning talk presents Carnegie Mellon University Arboretum Tour, an ArcGIS StoryMap exploring Gates Garden, Pollinator Garden, and Peace Garden. The tour begins with an overview map of the three gardens, then allows visitors to select individual trees and learn about them through photographs and species profiles. Each profile introduces the tree’s common and scientific names, origins, preferred habitat, identifying features, ecological roles, and cultural uses. These details connect what visitors see on campus with stories they might otherwise miss. For example, quaking aspens can share an underground root system, while eastern white pines provide food for birds and small mammals. The paperbark maple’s peeling, cinnamon-colored bark gives visitors something distinctive to look for on their next walk. By connecting these stories to specific locations, the project helps students, staff, and visitors recognize trees they may pass every day. Visitors can explore the gardens online or use the maps to guide their own campus walks. The presentation will demonstrate how interactive mapping and plant stories come together to make the Arboretum’s collection easier to explore and encourage people to look more closely at familiar campus spaces.
 
+  - name: "Planning Health Lens: An Adaptable Framework for Turning Community Data into Action"
+    type: presentation
+    image: radio_microphone_lg.gif
+    start: "10:40"
+    end: "11:00"
+    organization: larson-design-group
+
   - name: Lightning Session 3
-    start: "11:15"
-    end: "11:35"
+    type: lightning
+    image: bolt-down.gif
+    start: "11:00"
+    end: "11:30"
     subsessions:
       - talks:
           - title: "Loafometry: Dimensions of Deliciousness"
@@ -76,6 +117,50 @@ sessions:
               This initiative creates a floor-aware indoor GIS map of all Pitt campus buildings by connecting existing AutoCAD floor plans to ArcGIS Online. Room polygons are attributed from ARCHIBUS (the space management system of record). The data model is designed to be compatible with ArcGIS Indoors when that license is acquired, and the work serves as a bridge until Revit becomes the authoring environment in 2027
 
               Our submission walks users through the process of automating georeferencing across hundreds of CAD drawings to encourage and simplify transition to ArcGIS Indoors, while demonstrating the value of this data management method for space teams via experience builder demo and seminar discussion.
+
+  - name: New Datums and Coordinate Systems are Just Around the Corner
+    type: presentation
+    image: radio_microphone_lg.gif
+    start: "11:30"
+    end: "12:00"
+    organization: pa-geospatial-board
+
   - name: Lunch
+    type: meal
+    image: eat.gif
     start: "12:00"
-    end: "13:00"
+    end: "12:45"
+    sponsor: CMU Sustainability Initiative
+
+  - name: Roundtable Discussions on Accessibility, GIS & Maps
+    type: activity
+    image: dicsussions.gif
+    start: "12:45"
+    end: "13:30"
+
+  - name: Open House & Gallery
+    type: activity
+    image: maps.gif
+    start: "13:30"
+    end: "14:45"
+    description: Voting ends at 2:15 pm.
+
+  - name: Closing and Awards
+    type: general
+    image: starspin.gif
+    start: "14:45"
+    end: "15:00"
+
+  - name: Sidewalk Audit
+    type: activity
+    image: nota.gif
+    start: "15:00"
+    location: Outside
+
+  - name: Mappy Hour
+    type: social
+    image: wine.gif
+    start: "16:00"
+    end: "18:00"
+    location: University Club, Library Room
+    sponsor: Larson Design Group

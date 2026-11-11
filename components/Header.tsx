@@ -1,3 +1,4 @@
+import {AccessibilityMenu} from "./AccessibilityMenu";
 import {HomeButton} from "./HomeButton";
 
 /** Site title on every page, with a HOME button off the home page. */
@@ -22,6 +23,7 @@ export function Header() {
 
       </div>
       <HomeButton/>
+      <AccessibilityMenu/>
     </header>
   );
 }

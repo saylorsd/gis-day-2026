@@ -17,7 +17,7 @@ export default async function ContentPage({ params }: Props) {
     const page = contentPage((await params).slug);
     return (
         <main className="mx-auto max-w-2xl px-4">
-            <h1>{page.title}</h1>
+            <h1 className="page-title">{page.title}</h1>
             <div className="content">
                 <Blocks blocks={page.body} />
             </div>
