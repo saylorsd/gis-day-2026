@@ -9,7 +9,8 @@ import type { ReactNode } from "react";
  *
  * Motion stops (content just sits still) when:
  * - the visitor's system asks for reduced motion (prefers-reduced-motion), or
- * - "Hide animations" is on in the Accessibility menu (.no-gifs on <html>).
+ * - "Hide animations" is on in the Accessibility menu (.no-gifs on <html>),
+ *   unless the visitor turned animations back on there (.show-gifs).
  * It also pauses on hover. Styles: .marquee in app/styles/main.css.
  *
  * Pass `decorative` for text that adds nothing for screen reader users,

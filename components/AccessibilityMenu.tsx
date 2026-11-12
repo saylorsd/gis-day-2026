@@ -8,9 +8,17 @@ import { useEffect, useState } from "react";
  * choices before first paint so the GIFs and tiles don't flash in.
  */
 const OPTIONS = [
-  { key: "no-gifs", label: "Hide animations" },
-  { key: "no-bg", label: "Remove background tiles" },
-  { key: "high-contrast", label: "High contrast" },
+  {
+    key: "no-gifs",
+    label: "Hide animations",
+    query: "(prefers-reduced-motion: reduce)",
+  },
+  { key: "no-bg", label: "Remove background tiles", query: null },
+  {
+    key: "high-contrast",
+    label: "High contrast",
+    query: "(prefers-contrast: more)",
+  },
 ] as const;
 
 type Key = (typeof OPTIONS)[number]["key"];
@@ -27,8 +35,17 @@ export const ACCESSIBILITY_SCRIPT = `(function () {
     function apply(key, query) {
       var saved = localStorage.getItem("a11y:" + key);
       if (saved === "1" || (saved === null && query && matchMedia(query).matches)) c.add(key);
+      // Follow the system setting live (including DevTools emulation) until
+      // the visitor makes their own choice in the menu.
+      if (query) matchMedia(query).addEventListener("change", function (e) {
+        try {
+          if (localStorage.getItem("a11y:" + key) === null) c.toggle(key, e.matches);
+        } catch (err) {}
+      });
     }
     apply("no-gifs", "(prefers-reduced-motion: reduce)");
+    // A saved "off" overrides the reduced-motion CSS in main.css.
+    if (localStorage.getItem("a11y:no-gifs") === "0") c.add("show-gifs");
     apply("no-bg");
     apply("high-contrast", "(prefers-contrast: more)");
   } catch (e) {}
@@ -43,20 +60,35 @@ export function AccessibilityMenu() {
       >,
   );
 
-  // Sync with whatever the head script applied.
+  // Sync with whatever the head script applied, now and when a system
+  // preference changes later.
   useEffect(() => {
-    const c = document.documentElement.classList;
-    setEnabled(
-      Object.fromEntries(
-        OPTIONS.map(({ key }) => [key, c.contains(key)]),
-      ) as Record<Key, boolean>,
-    );
+    const html = document.documentElement;
+    const sync = () =>
+      setEnabled(
+        Object.fromEntries(
+          OPTIONS.map(({ key }) => [key, html.classList.contains(key)]),
+        ) as Record<Key, boolean>,
+      );
+    sync();
+    const observer = new MutationObserver(sync);
+    observer.observe(html, { attributes: true, attributeFilter: ["class"] });
+    return () => observer.disconnect();
   }, []);
 
   const toggle = (key: Key, on: boolean) => {
-    document.documentElement.classList.toggle(key, on);
+    const query = OPTIONS.find((o) => o.key === key)?.query;
+    const systemDefault = query ? matchMedia(query).matches : false;
+    const c = document.documentElement.classList;
+    c.toggle(key, on);
+    // Only remember a choice that overrides the system setting. Picking the
+    // system's own answer clears the saved choice, so the option goes back to
+    // following the system (otherwise flipping a toggle on and off would pin
+    // it and ignore later changes to the system setting).
+    if (key === "no-gifs") c.toggle("show-gifs", !on && systemDefault);
     try {
-      localStorage.setItem(storageKey(key), on ? "1" : "0");
+      if (on === systemDefault) localStorage.removeItem(storageKey(key));
+      else localStorage.setItem(storageKey(key), on ? "1" : "0");
     } catch {}
     setEnabled((prev) => ({ ...prev, [key]: on }));
   };

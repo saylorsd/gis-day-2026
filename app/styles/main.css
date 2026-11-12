@@ -53,9 +53,19 @@ th {
   @apply m-0;
 }
 
-/* Accessibility menu (components/AccessibilityMenu.tsx) */
+/*
+ * Accessibility menu (components/AccessibilityMenu.tsx). GIFs are hidden when
+ * "Hide animations" is on (.no-gifs), or when the system asks for reduced
+ * motion and the visitor hasn't turned animations back on (.show-gifs).
+ */
 .no-gifs img[src$=".gif"] {
   display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:not(.show-gifs) img[src$=".gif"] {
+    display: none;
+  }
 }
 
 /* Page title: the same style on every page. */
@@ -72,15 +82,30 @@ th {
  * hidden visually but still read by screen readers, and shown in the GIF's
  * place when animations are turned off in the Accessibility menu.
  */
-.gif-fallback:not(.no-gifs *) {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
+@media (prefers-reduced-motion: no-preference) {
+  .gif-fallback:not(.no-gifs *) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .show-gifs .gif-fallback:not(.no-gifs *) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
 }
 
 .no-bg body {
@@ -159,7 +184,7 @@ th {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track {
+  html:not(.show-gifs) .marquee-track {
     animation: none;
   }
 }
