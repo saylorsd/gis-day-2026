@@ -79,3 +79,13 @@ midi-player::part(time) {
 midi-player::part(seek-bar) {
     accent-color: #000080;
 }
+
+/*
+ * Keyboard focus ring for the seek bar. html-midi-player's own CSS removes
+ * outlines (it expects a focus-visible polyfill we don't load), so without
+ * this the slider takes focus but shows nothing.
+ */
+midi-player::part(seek-bar):focus-visible {
+    outline: 2px dotted #000000;
+    outline-offset: 2px;
+}

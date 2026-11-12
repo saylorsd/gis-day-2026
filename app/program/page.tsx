@@ -9,18 +9,20 @@ import {
   type Talk,
 } from "@/lib/content";
 import { clockTime } from "@/lib/time";
+import { DecorativeImage } from "@/components/DecorativeImage";
 
-export const metadata = { title: program().title, description: program().description };
+export const metadata = {
+  title: program().title,
+  description: program().description,
+};
 
 export default function ProgramPage() {
   const { sessions } = program();
   return (
     <main className="mx-auto max-w-2xl px-4">
       <h2 className="page-title gif-fallback">Agenda</h2>
-      <img
+      <DecorativeImage
         src="/images/agenda.gif"
-        alt=""
-        aria-hidden="true"
         className="mt-4 h-16 md:h-auto"
       />
       <section id="lightning-talks">
@@ -46,12 +48,7 @@ function SessionBlock({ session, index }: { session: Session; index: number }) {
         <div>
           {session.image && (
             <>
-              <img
-                className="h-12"
-                alt=""
-                aria-hidden="true"
-                src={session.image}
-              />{" "}
+              <DecorativeImage className="h-12" src={session.image} />{" "}
             </>
           )}
           <h3 className="m-0 flex-col items-center text-4xl leading-none font-black uppercase">
@@ -102,19 +99,9 @@ function SubsessionBlock({ subsession }: { subsession: Subsession }) {
       </ol>
       {subsession.qaMinutes > 0 && (
         <p className="text-2xl font-medium">
-          <img
-            className="h-8"
-            src="/images/question-mark.gif"
-            aria-hidden="true"
-            alt="Question Mark"
-          />{" "}
+          <DecorativeImage className="h-8" src="/images/question-mark.gif" />{" "}
           <span>Q&amp;A &middot; {subsession.qaMinutes} minutes</span>{" "}
-          <img
-            className="h-8"
-            src="/images/question-mark.gif"
-            aria-hidden="true"
-            alt="Question Mark"
-          />
+          <DecorativeImage className="h-8" src="/images/question-mark.gif" />
         </p>
       )}
     </div>
