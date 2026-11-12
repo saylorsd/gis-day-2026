@@ -1,15 +1,18 @@
-import {Details} from "@/components/Details";
-import {tabling} from "@/lib/content";
-import {Linebreaks} from "@/components/Markdown";
+import { Details } from "@/components/Details";
+import { tabling } from "@/lib/content";
+import { Linebreaks } from "@/components/Markdown";
 
-export const metadata = {title: tabling().title, description: tabling().description};
+export const metadata = {
+  title: tabling().title,
+  description: tabling().description,
+};
 
 export default function TablingPage() {
-  const {title, tables} = tabling();
+  const { title, tables } = tabling();
   return (
     <main className="mx-auto max-w-2xl px-4">
       <h1 className="page-title">{title}</h1>
-      <ul className="m-0 pl-0 list-none">
+      <ul className="m-0 list-none pl-0">
         {tables.length === 0 && <li>Tabling groups coming soon.</li>}
         {tables.map((table, i) => (
           <li key={table.name} id={`table-${i + 1}`} className="mb-12">
@@ -21,7 +24,7 @@ export default function TablingPage() {
                 <span>{table.organization.name}</span>
               </p>
             )}
-            <Linebreaks text={table.description ?? ""}/>
+            <Linebreaks text={table.description ?? ""} />
           </li>
         ))}
       </ul>

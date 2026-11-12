@@ -9,9 +9,9 @@
 @import "./midi-player.css" layer(components);
 
 @layer base {
-    body {
-        @apply text-base;
-    }
+  body {
+    @apply text-base;
+  }
 }
 
 /* Class names can live in components and in YAML content (Markdown/HTML). */

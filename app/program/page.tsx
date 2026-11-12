@@ -71,10 +71,8 @@ function SessionBlock({ session, index }: { session: Session; index: number }) {
           )}
           {session.location && <span> &middot; {session.location}</span>}
         </p>
-        {session.sponsor && (
-          <p className="my-2 text-lg leading-none italic">
-            Sponsored by {session.sponsor}
-          </p>
+        {session.note && (
+          <p className="my-2 text-lg leading-none italic">{session.note}</p>
         )}
         <Details text={session.description} />
       </header>

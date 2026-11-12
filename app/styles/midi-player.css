@@ -1,75 +1,76 @@
-
 midi-player {
-    --bevel: 2px;
+  --bevel: 2px;
 
-    display: block;
-    width: min(100%, 28rem);
-    margin: 1.5rem auto;
-    font-family: "Times New Roman", Arial, sans-serif;
-    font-size: 1.125rem;
+  display: block;
+  width: min(100%, 28rem);
+  margin: 1.5rem auto;
+  font-family: "Times New Roman", Arial, sans-serif;
+  font-size: 1.125rem;
 }
 
 /* Raised gray window */
 midi-player::part(control-panel) {
-    background: none;
+  background: none;
 }
 
-
 midi-player::part(seek-bar)::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Crucial for WebKit override */
-    appearance: none;
-    @apply size-4;
-    @apply rounded-full bg-black;
-    margin-top: -6px; /* Centers the thumb over the track if needed */
+  -webkit-appearance: none; /* Crucial for WebKit override */
+  appearance: none;
+  @apply size-4;
+  @apply rounded-full bg-black;
+  margin-top: -6px; /* Centers the thumb over the track if needed */
 }
 
 /* 3. Target the thumb in Gecko (Firefox) */
 midi-player::part(seek-bar)::-moz-range-thumb {
-    border: none; /* Firefox applies a default border */
-    @apply size-4;
-    @apply rounded-full;
-    @apply bg-black;
+  border: none; /* Firefox applies a default border */
+  @apply size-4;
+  @apply rounded-full;
+  @apply bg-black;
 }
 
 /* Square beveled play/stop button */
 midi-player::part(play-button) {
-    width: 2.5rem;
-    height: 2.25rem;
-    border-radius: 0;
-    background: #c0c0c0;
-    color: #000000;
-    box-shadow: inset calc(var(--bevel) * -1) calc(var(--bevel) * -1) 0 #000000,
+  width: 2.5rem;
+  height: 2.25rem;
+  border-radius: 0;
+  background: #c0c0c0;
+  color: #000000;
+  box-shadow:
+    inset calc(var(--bevel) * -1) calc(var(--bevel) * -1) 0 #000000,
     inset var(--bevel) var(--bevel) 0 #ffffff,
     inset calc(var(--bevel) * -2) calc(var(--bevel) * -2) 0 #808080,
     inset calc(var(--bevel) * 2) calc(var(--bevel) * 2) 0 #dfdfdf;
-    transition: none;
+  transition: none;
 }
 
 midi-player::part(play-button):hover {
-    background: #c0c0c0;
+  background: #c0c0c0;
 }
 
 midi-player::part(play-button):active {
-    background: #c0c0c0;
-    padding: var(--bevel) 0 0 var(--bevel);
-    box-shadow: inset var(--bevel) var(--bevel) 0 #000000,
+  background: #c0c0c0;
+  padding: var(--bevel) 0 0 var(--bevel);
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 #000000,
     inset calc(var(--bevel) * -1) calc(var(--bevel) * -1) 0 #ffffff,
     inset calc(var(--bevel) * 2) calc(var(--bevel) * 2) 0 #808080,
     inset calc(var(--bevel) * -2) calc(var(--bevel) * -2) 0 #dfdfdf;
 }
 
 midi-player::part(play-button):focus-visible {
-    outline: 1px dotted #000000;
-    outline-offset: calc(var(--bevel) * -4);
+  outline: 1px dotted #000000;
+  outline-offset: calc(var(--bevel) * -4);
 }
 
 /* Time readout in a sunken white field */
 midi-player::part(time) {
-    background: #ffffff;
-    color: #000000;
-    padding: 0.125rem 0.5rem;
-    font-variant-numeric: tabular-nums;
-    box-shadow: inset var(--bevel) var(--bevel) 0 #808080,
+  background: #ffffff;
+  color: #000000;
+  padding: 0.125rem 0.5rem;
+  font-variant-numeric: tabular-nums;
+  box-shadow:
+    inset var(--bevel) var(--bevel) 0 #808080,
     inset calc(var(--bevel) * -1) calc(var(--bevel) * -1) 0 #ffffff,
     inset calc(var(--bevel) * 2) calc(var(--bevel) * 2) 0 #000000,
     inset calc(var(--bevel) * -2) calc(var(--bevel) * -2) 0 #dfdfdf;
@@ -77,7 +78,7 @@ midi-player::part(time) {
 
 /* Navy, like a Win95 title bar */
 midi-player::part(seek-bar) {
-    accent-color: #000080;
+  accent-color: #000080;
 }
 
 /*
@@ -86,6 +87,6 @@ midi-player::part(seek-bar) {
  * this the slider takes focus but shows nothing.
  */
 midi-player::part(seek-bar):focus-visible {
-    outline: 2px dotted #000000;
-    outline-offset: 2px;
+  outline: 2px dotted #000000;
+  outline-offset: 2px;
 }

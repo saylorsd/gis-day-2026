@@ -7,7 +7,7 @@
 # Each session needs a type: lightning, presentation, meal, activity, general,
 # or social (rendered as class "session-<type>" and data-type="<type>").
 # Optional per session: end, organization (id from organizations.yaml),
-# sponsor, location, description, image. Sessions without talks omit subsessions.
+# note, location, description, image. Sessions without talks omit subsessions.
 # image is a file name in public/images/ shown beside the session title, e.g.
 #   image: eat.gif
 # Without one, lightning, presentation and meal sessions get a default image
@@ -21,7 +21,7 @@ sessions:
     image: breakfast.gif
     start: "08:15"
     end: "09:00"
-    sponsor: Esri
+    note: Sponsored by Esri
 
   - name: Welcome
     type: general
@@ -131,10 +131,11 @@ sessions:
     image: eat.gif
     start: "12:00"
     end: "12:45"
-    sponsor: CMU Sustainability Initiative
+    note: Sponsored by CMU Sustainability Initiative
 
   - name: Roundtable Discussions on Accessibility, GIS & Maps
     type: activity
+    note: moderated by Christine Mendoza, Carnegie Mellon University
     image: dicsussions.gif
     start: "12:45"
     end: "13:30"
@@ -144,7 +145,7 @@ sessions:
     image: maps.gif
     start: "13:30"
     end: "14:45"
-    description: Voting ends at 2:15 pm.
+    note: Voting ends at 2:15 pm.
 
   - name: Closing and Awards
     type: general
@@ -164,4 +165,4 @@ sessions:
     start: "16:00"
     end: "18:00"
     location: University Club, Library Room
-    sponsor: Larson Design Group
+    note: Sponsored by Larson Design Group

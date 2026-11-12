@@ -87,14 +87,12 @@ posters:
   - title: "Property, Race, & Grade: The Effects of Redlining on Baltimore's Current Neighborhood Demographics and Median Property Values"
     creators: [ mitchell-chernick ]
     description: |
-      My submission uses maps to identify the effects that the Home Owner's Loan Corporation's (HOLC) neighborhood grades from 1937 have had on current neighborhood racial distribution and current Neighborhood Median Property Value (NMPV).
-
-      What I found was that gentrification and white flight have led neighborhood racial demographics to diverge from the historical distribution determined by HOLC Grades (A, B, C, or D). A Grades were the best and were given to wealthy and White neighborhoods, while D Grades were the worst and were given to poor Black neighborhoods. People in A Grade neighborhoods were able to easily get favorable mortgages while those in D Grade neighborhoods were almost never able to get a mortgage.
-
-      Additionally, I found that the NMPVs for neighborhoods of each grade have ranges hundreds of thousands of dollars wide, and that where a neighborhood's NMPV falls within the range of their grade generally corresponds to the neighborhood's current racial majority.
-
-      My conclusions from my maps and findings were that HOLC neighborhood Grades no longer strongly indicate current neighborhood demographics or NMPV. Instead, current neighborhood demographics have a much stronger effect on NMPV.
-  - title: "They cross bridges for their pets: mapping access to veterinary services."
-    creators: [ mary-elizabeth-rauktis ]
-    description: |
-      Three-fourths of Americans have companion animals (pets). These animals require ongoing veterinary checkups and vaccinations which improve quality of life and reduce zoonosis (transmission of disease from animal to human).  However, veterinary care is difficult to access due to financial models of care (private equity), lack of transportation, as well as veterinary deserts where no care exists.  Animal Friends community outreach offers vaccination clinics in the summer and fall to meet the need for vaccinations. This research poster asks the questions: (1) where are people coming from in relation to the clinic location; (2) is there a relationship between clinic locations --. are people coming across the county for vaccinations according to distance theory (distance rather than need driving access)? This research poster displays six maps of each clinic as well as the flow diagram and a map of the veterinary landscape of the county in order to answer these questions. All maps were created using ArcGIS through the University of Pittsburgh ULS and the School of Social Work, and Animal Friends. The maps suggest that veterinary need is the motivation for owners driving long distances, and in particular the need for a repeat (booster) vaccination. Suggestions for future research as well as clinic management are included in this poster.
+      My submission uses maps to identify the effects that the Home Owner's Loan Corporation's (HOLC) neighborhood grades from 1937 have had on current neighborhood racial distribution and current Neighborhood Median Property Value (NMPV). 
+      
+      What I found was that gentrification and white flight have led neighborhood racial demographics to diverge from the historical distribution determined by HOLC Grades (A, B, C, or D). 
+      
+      A Grades were the best and were given to wealthy and White neighborhoods, while D Grades were the worst and were given to poor Black neighborhoods. 
+      
+      People in A Grade neighborhoods were able to easily get favorable mortgages while those in D Grade neighborhoods were almost never able to get a mortgage. Additionally, I found that the NMPVs for neighborhoods of each grade have ranges hundreds of thousands of dollars wide, and that where a neighborhood's NMPV falls within the range of their grade generally corresponds to the neighborhood's current racial majority. 
+      
+      My conclusions from my maps and findings were that HOLC neighborhood Grades no longer strongly indicate current neighborhood demographics or NMPV. Instead, current neighborhood demographics have a much stronger effect on NMPV
