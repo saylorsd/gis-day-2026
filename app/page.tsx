@@ -1,5 +1,6 @@
 import { Markdown } from "@/components/Markdown";
 import { MidiPlayer } from "@/components/MidiPlayer";
+import { Marquee } from "@/components/Marquee";
 import { home } from "@/lib/content";
 import { DecorativeImage } from "@/components/DecorativeImage";
 
@@ -44,12 +45,15 @@ export default function HomePage() {
             <DecorativeImage className="h-6" src="/images/scottiebeg-wag.gif" />
           </div>
         </div>
-        {/* @ts-expect-error <marquee> is obsolete but fits the style of this site and serves no informational purpose*/}
-        <marquee className="m-0 mt-1 text-xl leading-none font-bold text-pink-800 italic">
+        <Marquee
+          decorative
+          className="m-0 mt-1 text-xl leading-none font-bold text-pink-800 italic"
+        >
           GIS DAY&nbsp;&nbsp;&nbsp;&nbsp; GIS DAY&nbsp;&nbsp;&nbsp;&nbsp; GIS
-          DAY&nbsp;&nbsp;&nbsp;&nbsp; GIS DAY
-          {/* @ts-expect-error <marquee> is obsolete but fits the style of this site and serves no informational purpose*/}
-        </marquee>
+          DAY&nbsp;&nbsp;&nbsp;&nbsp; GIS DAY&nbsp;&nbsp;&nbsp;&nbsp; GIS
+          DAY&nbsp;&nbsp;&nbsp;&nbsp; GIS DAY&nbsp;&nbsp;&nbsp;&nbsp; GIS
+          DAY&nbsp;&nbsp;&nbsp;&nbsp;
+        </Marquee>
         {body && (
           <Markdown
             className="home-content m-0 mx-auto max-w-3xl leading-snug"

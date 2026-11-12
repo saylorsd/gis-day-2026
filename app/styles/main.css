@@ -54,8 +54,7 @@ th {
 }
 
 /* Accessibility menu (components/AccessibilityMenu.tsx) */
-.no-gifs img[src$=".gif"],
-.no-gifs marquee {
+.no-gifs img[src$=".gif"] {
   display: none;
 }
 
@@ -117,4 +116,50 @@ th {
 .high-contrast th,
 .high-contrast td {
   border: 2px solid #000000;
+}
+
+/*
+ * CSS marquee (components/Marquee.tsx). The track holds two copies of the
+ * content and slides left by one copy's width, then repeats seamlessly.
+ */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  container-type: inline-size;
+}
+
+.marquee-track {
+  display: inline-flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 12s) linear infinite;
+}
+
+/* Each copy is at least as wide as the box, so the loop never shows a gap. */
+.marquee-track > span {
+  flex-shrink: 0;
+  min-width: 100cqw;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* No motion: hold still and show the start of the text. */
+.no-gifs .marquee-track {
+  animation: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
