@@ -110,6 +110,11 @@ export function AccessibilityMenu() {
             </label>
           ))}
         </fieldset>
+        <p>
+          <a href="https://www.streamtext.net/player?event=GIS-for-All">
+            Follow live captioning
+          </a>
+        </p>
         <p className="mt-3 border-t border-[#808080] pt-2 text-base">
           If you require accessibility accommodations, please email Jessica
           Benner (
