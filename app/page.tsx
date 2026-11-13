@@ -3,6 +3,7 @@ import { MidiPlayer } from "@/components/MidiPlayer";
 import { Marquee } from "@/components/Marquee";
 import { home } from "@/lib/content";
 import { DecorativeImage } from "@/components/DecorativeImage";
+import Image from "next/image";
 
 // Windows 95 16-color palette, cycled over the menu buttons.
 const MENU_COLORS = [
@@ -25,13 +26,31 @@ export default function HomePage() {
       <main className="mx-auto max-w-2xl px-4">
         <div className="mx-auto max-w-xs">
           <p className="m-0 text-xl font-bold italic">
-            <a href="/friday">{event.date}</a>
+            <a href="/friday">
+              <Image
+                alt="black cat"
+                src="/images/bit-face2.png"
+                height={30}
+                width={30}
+              />
+            </a>
+            {event.date}
+            <a href="/friday">
+              <Image
+                alt="black cat"
+                src="/images/bit-face.png"
+                height={30}
+                width={30}
+              />
+            </a>
           </p>
-          {event.location.map((line) => (
-            <div key={line} className="text-xl leading-none">
-              {line}
-            </div>
-          ))}
+          <a href="https://maps.app.goo.gl/6oVJwSg7us45ZwYP7">
+            {event.location.map((line) => (
+              <div key={line} className="text-xl leading-none">
+                {line}
+              </div>
+            ))}
+          </a>
           <div className="flex items-end justify-center">
             <DecorativeImage
               className="h-6"

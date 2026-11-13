@@ -131,7 +131,7 @@ sessions:
     image: eat.gif
     start: "12:00"
     end: "12:45"
-    note: Sponsored by CMU Sustainability Initiative
+    : Sponsored by CMU Sustainability Initiative
 
   - name: Roundtable Discussions on Accessibility, GIS & Maps
     type: activity
